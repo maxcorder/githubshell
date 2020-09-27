@@ -3,29 +3,48 @@
 <head>
 <title>Github Shell - Project Based</title>
 <meta charset="utf-8">
-<style>
-body { background-color: #98AFC7; }
-h1 { color:#2C3539; }
-h2 { color:#2C3539; }
-h3 { color:#2C3539; }
-body { color: #2C3539; }
-</style>
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
 <header>
-	<h1> Maxwell Corder - Senior Project </h1>
+	<h1> Contact Us </h1>
 </header>
 </header>
 <nav>
+	<ul>
 	<b>
-		<a href="index.html">Home</a> &nbsp;
-		<a href="news.html">News</a> &nbsp;
-		<a href="shop.html">Shop</a>  &nbsp;
-		<a href="contact.html">Contact Us</a> 
+		<li><a href="index.html">Home</a></li> &nbsp;
+		<li><a href="shop.html">Shop</a></li> &nbsp;
+		<li><a href="news.html">News</a></li> &nbsp;
+		<li><a href="contact.html">Contact Us</a></li> 
 	</b>
+	</ul>
 </nav>
 <header>
-	<h1> Coming Soon </h1>
+	<h2> Get in Touch </h2>
 </header>
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
 </body>
 </html>
