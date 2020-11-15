@@ -1,91 +1,143 @@
-body { background-color: #dddddd;
- font-family: Arial, Helvetica, sans-serif; 
- color: #2C3539; }
+* {
+  box-sizing: border-box;
+}
 
-h1 { color:#2C3539;
- text-decoration: none; 
-text-align: center; }
-
-h2 { color:#2C3539;
- text-decoration: none;
-text-align: center; }
-
-
-
-h3 { color:#2C3539; text-decoration: underline; }
-
-
-ul {
-  list-style-type: none;
+body {
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px; 
+h1 {
+	padding-left: 29em;
+}
+
+hr {
+	border-top: 2px solid black;
+}
+
+img {
+	 width: 50%;
+	 padding-top: 10px;
+	 margin: 0 auto;
+}
+
+article {
+	padding-left: 27em;
+}
+
+hr.space {
+	border-top: 1px dashed black;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #D3D3D3;
+  
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: black;
+  padding: 16px;
   text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
+  display: block;
 }
 
 
-/* Contact Form Styles */
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+.sidenav a:hover {
+  background-color: white;
+  color: black;
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #4CAF50;
+
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+.shopcontent {
+  margin-left: 200px;
+  padding-left: 38em;
+
+}
+
+/* Home Page */
+
+
+.home {
+  position: relative;
+  width: 80%;
+}
+
+
+.home img {
+  width: 100%;
+  height: auto;
+
+}
+
+.home .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
   color: white;
-  padding: 12px 20px;
+  font-size: 16px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Add a background color and some padding around the form */
-.container {
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+}
+
+.home .btn:hover {
+  background-color: black;
 }
 
 
-/* Product Styles */
+
+/*Product Styles */
+
+.column {
+  width: 30%;
+  padding: 0 10px;
+  display: table;
+}
+
+
+.row {margin: 0 -5px;}
+
+
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
   text-align: center;
-  font-family: arial;
+  background-color: #D3D3D3;
 }
+
 
 .price {
   color: grey;
   font-size: 22px;
+  text-align: center;
 }
 
-.card button {
+.column button {
   border: none;
   outline: 0;
   padding: 12px;
@@ -97,95 +149,53 @@ input[type=submit]:hover {
   font-size: 18px;
 }
 
-.card button:hover {
-  opacity: 0.7;
-}
-
-nav {
-	display: block;
-}
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial;
-  margin: 0 auto; /* Center website */
-  max-width: 800px; /* Max width */
-  padding: 20px;
-}
-
-.heading {
-  font-size: 25px;
-  margin-right: 25px;
-}
-
-.fa {
-  font-size: 25px;
+.column button:hover {
+  opacity: 0.1;
 }
 
 .checked {
   color: orange;
+  margin: auto;
 }
 
-/* Three column layout */
-.side {
-  float: left;
-  width: 15%;
-  margin-top: 10px;
+
+/*CONTACT FORM */
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
 }
 
-.middle {
-  float: left;
-  width: 70%;
-  margin-top: 10px;
-}
-
-/* Place text to the right */
-.right {
-  text-align: right;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The bar container */
-.bar-container {
-  width: 100%;
-  background-color: #f1f1f1;
-  text-align: center;
+input[type=submit] {
+  background-color: #000000;
   color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
-.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+input[type=submit]:hover {
+  background-color: #D3D3D3;
+}
 
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-  .side, .middle {
-    width: 100%;
-  }
-  /* Hide the right column on small screens */
-  .right {
-    display: none;
-  }
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-right: 20px;
 }
 
 
+/* Checkout Form */
 
 .row {
-  display: -ms-flexbox;
+  display: -ms-flexbox; 
   display: flex;
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
@@ -203,7 +213,7 @@ body {
 }
 
 .col-75 {
-  -ms-flex: 75%; 
+  -ms-flex: 75%;
   flex: 75%;
 }
 
@@ -260,12 +270,22 @@ span.price {
   color: grey;
 }
 
-.checked {
-  color: orange;
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
 }
 
-header {
-	width: 100%;
-	background-color: #FFFFFF;
-	margin: auto;
+.cartbutton {
+	padding-left: -20px;
 }
+
+
+
+
+
+
