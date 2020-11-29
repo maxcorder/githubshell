@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="project.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style> 
 
 input[type=text], input[type=password] {
@@ -128,6 +129,8 @@ span.psw {
      width: 100%;
   }
 }
+
+
 </style>
 </head>
 <body>
@@ -135,44 +138,38 @@ span.psw {
 <div class="sidenav">
   <a href="index.html">HOME</a>
   <a href="shop.html">SHOP</a>
-  <a href="checkout.html">CHECKOUT</a>
   <a href="news.html">NEWS</a>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <a href="contact.html">CONTACT</a>
+  <a href="checkout.html">CART</a>
   <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOG IN</button>
-  <button onclick=window.location.href="checkout.html" type="button" class="cartbutton">
-          <span class="glyphicon glyphicon-shopping-cart"></span> CART 
-        </button>
-
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <span id="social"> <a href="https://www.facebook.com" class="fa fa-facebook"></a><a href="https://twitter.com" class="fa fa-twitter"></a> <a href="https://youtube.com" class="fa fa-youtube"></a> </span>
+  
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php" method="post">
@@ -200,9 +197,10 @@ span.psw {
 </div>
 
 <script>
-
+// Get the modal
 var modal = document.getElementById('id01');
 
+// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -210,16 +208,72 @@ window.onclick = function(event) {
 }
 </script>
 </div>
+<header>
 <h1>MAX'S PC SHOP</h1>
-  <hr>
+<hr>
+</header>
 <div class="content">
- <div class="home">
-  <img src="gpu.jpg" alt="shop">
-  <button onclick=window.location.href="shop.html" class="btn">SHOP NOW</button>
-</div>
+ <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+	<a href="deals.html">
+    <img src="blackfriday.png" style="width:100%">
+	</a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="shop.html">
+    <img src="newArrivals.png" style="width:100%">
+    </a>
+  </div>
+
   
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
   
 </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  
+</div>
+
 
 </body>
 </html>

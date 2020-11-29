@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Max's PC Shop</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="project.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #D3D3D3;
+  color: black;
+  padding: 16px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  opacity: 0.8;
+  background-color: white;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #D3D3D3;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="index.html">HOME</a>
+  <a href="shop.html">SHOP</a>
+  <a href="news.html">NEWS</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="checkout.html">CART</a>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOG IN</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <span id="social"> <a href="#" class="fa fa-facebook"></a><a href="#" class="fa fa-twitter"></a> <a href="#" class="fa fa-youtube"></a> </span>
+  
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+<main>
+<span id="blackfriday">
+	<h1> BLACK FRIDAY</h1>
+</span>
+	<hr>
+	<br>
+
+<div class="shopcontent">
+ <div class="row">
+  <div class="column">
+    <div class="card"></div>
+	<img src="cpu2.jpeg" alt="cpudeal">
+  <h2>Intel Core i9-10980XE</h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+  <p class="price"><s>$750.99</s></p>
+  <p class="price">NOW - $555.99 </p>
+  <p>Cascade Lake 18-Core 3.0 GHz LGA 2066 165W BX8069510980XE Desktop Processor</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+
+
+ <div class="row">
+  <div class="column">
+    <div class="card"></div>
+	<img src="gpu2.jpeg" alt="cpudeal">
+  <h2>ASUS ROG Strix GeForce RTX 2080 Ti</h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+  <p class="price"><s>$1409.99</s></p>
+  <p class="price">NOW - $1229.99 </p>
+  <p>DirectX 12 ROG-STRIX-RTX2080TI-11G-GAMING 11GB 352-Bit GDDR6 PCI Express 3.0 HDCP Ready SLI Support Video Card</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+  
+
+	<div class="row">
+  <div class="column">
+    <div class="card"></div>
+	<img src="gpu3.jpeg" alt="gpu3deal">
+  <h2>GIGABYTE GeForce GTX 1050 Ti</h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+  <p class="price"><s>$250.00</s></p>
+  <p class="price">NOW - $159.99 </p>
+  <p>DirectX 12 GV-N105TD5-4GD 4GB 128-Bit GDDR5 PCI Express 3.0 x16 Video Cards</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+  
+  	<div class="row">
+  <div class="column">
+    <div class="card"></div>
+	<img src="motherboard.jpeg" alt="mbdeal">
+  <h2>ASUS Prime Z390-P LGA 1151 (300 Series)</h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+  <p class="price"><s>$134.99</s></p>
+  <p class="price">NOW - $99.99 </p>
+  <p>Intel Z390 SATA 6Gb/s ATX Intel Motherboard</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+  
+  
+  	<div class="row">
+  <div class="column">
+    <div class="card"></div>
+	<img src="motherboard2.jpeg" alt="mbdeal">
+  <h2>ASUS ROG MAXIMUS XII EXTREME </h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+  <p class="price"><s>$1499.99</s></p>
+  <p class="price">NOW - $1399.99 </p>
+  <p>LGA 1200 Intel Z490 SATA 6Gb/s Extended ATX Intel Motherboard (16 Power Stages, Quad M.2, 10Gbps & Intel 2.5Gb LAN, Bundled Fan Extension Card II & ThunderboltEX 3-TR Card, 2" Livedash OLED)</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+  
+  
+  <div class="row">
+  <div class="column">
+    <div class="card"></div>
+	<img src="case1.jpeg" alt="case1deal">
+  <h2>Rosewill Gaming ATX Full Tower Computer Case</h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+  <p class="price"><s>$139.99</s></p>
+  <p class="price">NOW - $109.99 </p>
+  <p>White Edition, Supports Up to E-ATX / XL-ATX, Comes with Four Fans - THOR V2-W</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+  
+   <div class="row">
+  <div class="column">
+    <div class="card"></div>
+	<img src="case2.jpeg" alt="case2deal">
+  <h2>Cougar CONQUER 2 ATX Full Tower Gaming Case</h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+  <p class="price"><s>$349.99</s></p>
+  <p class="price">NOW - $319.99 </p>
+  <p>Integrated RGB Lighting System, Support Mini ITX / Micro ATX / ATX / CEB</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+
+
+
+	
+	
+
+
+
+
+
+
+
+</main>
+</div>
+</body>
+</html>
